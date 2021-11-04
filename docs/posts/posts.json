@@ -1,6 +1,6 @@
 [
   {
-    "path": "posts/2021-10-27-welcome/",
+    "path": "posts/2021-10-28-welcome/",
     "title": "welcome",
     "description": "A short description of the post.",
     "author": [
@@ -9,11 +9,11 @@
         "url": {}
       }
     ],
-    "date": "2021-10-27",
+    "date": "2021-10-28",
     "categories": [],
     "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-10-27T16:54:50-07:00",
+    "last_modified": "2021-10-28T10:49:09-07:00",
     "input_file": {}
   }
 ]

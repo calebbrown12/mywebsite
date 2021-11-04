@@ -1,18 +1,20 @@
 ---
-title: "mfeo"
-description: |
-  Welcome to the website. I hope you enjoy it!
+title: "Henry Brown"
+image: "HCB.jpg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/henry-caleb-brown-43812b186"
+  - label: Twitter
+    url: "https://twitter.com/_calebb12_"
+  - label: GitHub
+    url: "https://https://github.com/calebbrown12"
+  - label: Email
+    url: "mailto:brown.caleb1717@gmail.com"
 site: distill::distill_website
+output:
+  postcards::trestles
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
-# Learn more about publishing to GitHub Pages at:
-# https://rstudio.github.io/distill/publish_website.html#github-pages
-
-```
-
+ 
+I am a classically trained data scientist living in the San Francisco Bay Area. 
+Currently I work on the Oculus team at Facebook. I love talking about baseball, 
+true crime podcasts, and causal inference.
