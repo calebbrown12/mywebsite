@@ -1,0 +1,91 @@
+---
+title: "Resume"
+description: |
+  My Resume.
+author:
+  - name: Henry Caleb Brown
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+**HENRY CALEB BROWN**
+
+149 Ora Lane \| Caledonia. MS 39740 \| (662)313-6942 \| [Brown.caleb1717\@yahoo.com](mailto:Brown.caleb1717@yahoo.com){.email}
+
+## OBJECTIVE
+
+Seeking an Accounting/Auditing position utilizing the following background:
+
+-   Managing a lifeguard staff of over 15 people
+-   Providing exceptional customer service in the sales department
+-   Managing the clothing department and supervising sales
+-   Over 60 hours of Accounting and Accounting related classes
+
+## EDUCATION
+
+Bachelor in Business Administration Mississippi State University, Starkville, MS
+
+-   Graduated: December 2019
+-   Major: Business Administration
+-   Minor: Accounting
+-   Overall GPA: 3.36
+-   Program GPA: 3.47
+
+Masters in Professional Accountancy, Mississippi State University, Starkville, MS
+
+-   Estimated Graduation Date: Spring 2022
+-   Major: Professional Accountancy
+-   Minor: Accounting Data Analytics
+-   Current GPA: 3.66
+
+## SKILLS & ABILITIES
+
+Management
+
+-   Delegated tasks to all of staff and worked them hand in hand to run the pool
+-   Influencing, leading, and delegating abilities
+-   Critical thinking, decision making and problem solving skill
+-   Ability to influence people and clients
+-   Planning and organizing -- Organizational abilities
+-   Adaptability -- Efficient under pressure, always meet deadline
+
+Sales
+
+-   Customer service focus
+-   Interpersonal Skills
+-   Know how to negotiate prices with customers as well as recommending promotions
+-   Excellent written and verbal communication skills
+-   Quickly develop relationships with client
+-   Sound expertise in sales
+
+## EXPERIENCE
+
+Officer-in-Charge (OIC) of Casual Lieutenants United States Air Force, Creech AFB, 432 OSS\
+March '21 - Present
+
+-   Manage schedules for up to 90 lieutenants at any given time
+-   Delegate tasks to trainees
+-   In-process new lieutenants arriving to Creech AFB
+-   Work directly with flight commander and squadron commander
+
+Supervising Lifeguard\
+Joe Frank Sanderson Center, Starkville, MS\
+May '16- August '19
+
+-   Made schedules for 15 or more lifeguards
+-   Communicated with our director and relayed messages to staff
+-   Handled all pool cleaning duties and assigned shifts to others
+-   Managed all scheduling of swim lessons and events coming up
+
+Sales Associate\
+Dicks Sporting Goods, Columbus, MS\
+May '16 -- September '16
+
+-   Prepared merchandise for sales floor
+-   Prioritized and accomplished a wide range of tasks each shift
+-   Provided customer service to any individual interested in buying clothes
+
+
+
+
+
