@@ -10,8 +10,6 @@ navbar:
       href: index.html
     - text: "Resume"
       href: CV.html
-    - text: "Blog"
-      href: blog.html
     - text: "rsquared"
       href: R-Squared.html
       
