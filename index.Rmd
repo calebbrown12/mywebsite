@@ -15,6 +15,4 @@ output:
   postcards::trestles
 ---
  
-I am a classically trained data scientist living in the San Francisco Bay Area. 
-Currently I work on the Oculus team at Facebook. I love talking about baseball, 
-true crime podcasts, and causal inference.
+I am a program manager for the United Stated Air Force. Currently living in Colorado Springs, CO and working at Peterson Air Force Base. I lived in Caledonia, MS for 24 years of my life and went to Mississippi State to get my undergraduate degree in Business Administration. I am currently getting my masters in Professional Accountancy. 
