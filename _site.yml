@@ -12,8 +12,8 @@ navbar:
       href: CV.html
     - text: "Projects"
       menu:
-        - text: "RMarkdown"
-          href: RMarkdown.html
+        - text: "R-Squared"
+          href: R-Squared.html
         - text: "ML"
           href: 
         - text: "Final Project"
