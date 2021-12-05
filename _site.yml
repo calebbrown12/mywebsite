@@ -10,7 +10,13 @@ navbar:
       href: index.html
     - text: "Resume"
       href: CV.html
-    - text: "rsquared"
-      href: R-Squared.html
+    - text: "Projects"
+      menu:
+        - text: "RMarkdown"
+          href: RMarkdown.html
+        - text: "ML"
+          href: 
+        - text: "Final Project"
+          href: 
       
 output: distill::distill_article

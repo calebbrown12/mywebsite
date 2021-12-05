@@ -4,11 +4,11 @@ image: "HCB.jpg"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/henry-caleb-brown-43812b186"
-  - label: Twitter
-    url: "https://twitter.com/_calebb12_"
+  - label: Work Email
+    url: "mailto:henry.brown.15@us.af.mil"
   - label: GitHub
-    url: "https://https://github.com/calebbrown12"
-  - label: Email
+    url: "https://github.com/calebbrown12"
+  - label: Personal Email
     url: "mailto:brown.caleb1717@gmail.com"
 site: distill::distill_website
 output:
