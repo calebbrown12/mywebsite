@@ -15,8 +15,8 @@ navbar:
         - text: "R-Squared"
           href: R-Squared.html
         - text: "ML"
-          href: 
+          href: ML.html
         - text: "Final Project"
-          href: 
+          href: Final-Project.html
       
 output: distill::distill_article

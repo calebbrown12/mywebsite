@@ -1,0 +1,7 @@
+---
+title: "ML"
+description: |
+   Use one of your exercises to show off a machine learning model.
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
