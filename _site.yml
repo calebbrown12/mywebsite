@@ -17,6 +17,6 @@ navbar:
         - text: "ML"
           href: ML.html
         - text: "Final Project"
-          href: Final-Project.html
+          href: Final.html
   source_url: https://github.com/calebbrown12/mywebsite
 output: distill::distill_article

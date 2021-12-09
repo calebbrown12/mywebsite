@@ -93,10 +93,6 @@ It's very high at about 0.85, but the model is completely wrong. Using R-squared
 
 3\. *R-squared says nothing about prediction error, even with* $σ^2$ exactly the same, and no change in the coefficients. R-squared can be anywhere between 0 and 1 just by changing the range of X. We're better off using Mean Square Error (MSE) as a measure of prediction error.
 
-MSE is basically the fitted y values minus the observed y values, squared, then summed, and then divided by the number of observations.
-
-Let's demonstrate this statement by first generating data that meets all simple linear regression assumptions and then regressing y on x to assess both R-squared and MSE.
-
 ```{r,echo=TRUE}
 x <- seq(1,10,length.out = 100)
 set.seed(1)
@@ -165,15 +161,6 @@ Does x explain y, or does y explain x? Are we saying "explain" to dance around t
 all.equal(cor(x,y)^2, summary(lm(x ~ y))$r.squared, summary(lm(y ~ x))$r.squared)
 ```
 
-Let's recap:
-
--   R-squared does not measure goodness of fit.
-
--   R-squared does not measure predictive error.
-
--   R-squared does not necessarily increase when assumptions are better satisfied.
-
--   R-squared does not measure how one variable explains another.
 
 
 
