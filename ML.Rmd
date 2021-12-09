@@ -1,109 +1,49 @@
 ---
 title: "ML"
 description: |
-   Use one of your exercises to show off a machine learning model.
+  This exercise shows off how Machine Learning is used. 
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
-#Data Pre-Processing 
 
-- Explanation 
+##  Dimensionality Reduction 
 
+- Explanation
+Using this machine learning technique can help you cut down on the different dimensions that must be processed.  This technique brings out relationships between the original dimensions to identify new dimensions that better capture the relationships within the data.
 
 
 - Process and Results
+The graph show that PC1 and PC 2 had teh most variances. 
+
+- How it applies to Accounting
+It can help identify the most important features for a data set which will cut down the work that the accountant has to do.
 
 
-
-- How it can be used in accounting 
-
-
-```{r svm.ex.1.a}
+```{r}
 library(caret)
-library(tidyverse)
-#set the seed :)
-set.seed(1)
-#get our samples
-#using the iris data
-#lets split the data 60/40
+#store our data in another object
+dat <- iris
+#take the 4 continuous variables and perform PCA
+caret.pca <- preProcess(dat[,-5], method="pca",pcaComp=2)
 
-trainIndex <- createDataPartition(iris$Species, p = .75, list = FALSE, times = 1)
+caret.pca
+```
+```{r}
+caret.pca$
+#use that data to form our new inputs
+dat2 <- predict(caret.pca, dat[,-5])
 
-#look at the first few
-#head(trainIndex)
 
-#grab the data
-SVMTrain <- iris[ trainIndex,]
-SVMTest  <- iris[-trainIndex,]
+#using stats
+stat.pca <- prcomp(dat[,-5],
+                 center = TRUE,
+                 scale. = TRUE) 
 
-iris_SVM <- train(
-  form = factor(Species) ~ .,
-  data = SVMTrain,
-  #here we add classProbs because we want probs
-  trControl = trainControl(method = "cv", number = 10,
-                           classProbs =  TRUE),
-  method = "svmLinear",
-  preProcess = c("center", "scale"),
-  tuneLength = 10)
-
-iris_SVM
-
-summary(iris_SVM)
-
-svm_Pred<-predict(iris_SVM,SVMTest,type="prob")
-
-svmtestpred<-cbind(svm_Pred,SVMTest)
-
-svmtestpred<-svmtestpred%>%
-  mutate(prediction=if_else(setosa>versicolor & setosa>virginica,"setosa",
-  if_else(versicolor>setosa & versicolor>virginica, "versicolor",
-  if_else(virginica>setosa & virginica>versicolor,"virginica", "PROBLEM"))))
-
-table(svmtestpred$prediction)
-confusionMatrix(factor(svmtestpred$prediction),factor(svmtestpred$Species))
+# plot method
+plot(stat.pca, type = "l")
 ```
 
-```{r svm.ex.1.b}
-library(caret)
-library(tidyverse)
-#set the seed :)
-set.seed(1)
-#get our samples
-#using the iris data
-#lets split the data 60/40
-
-trainIndex <- createDataPartition(iris$Species, p = .50, list = FALSE, times = 1)
-
-#look at the first few
-#head(trainIndex)
-
-#grab the data
-SVMTrain <- iris[ trainIndex,]
-SVMTest  <- iris[-trainIndex,]
-
-iris_SVM <- train(
-  form = factor(Species) ~ .,
-  data = SVMTrain,
-  #here we add classProbs because we want probs
-  trControl = trainControl(method = "cv", number = 10,
-                           classProbs =  TRUE),
-  method = "svmLinear",
-  preProcess = c("center", "scale"),
-  tuneLength = 10)
-
-iris_SVM
-
-summary(iris_SVM)
-
-svm_Pred<-predict(iris_SVM,SVMTest,type="prob")
-
-svmtestpred<-cbind(svm_Pred,SVMTest)
-
-svmtestpred<-svmtestpred%>%
-  mutate(prediction=if_else(setosa>versicolor & setosa>virginica,"setosa",
-  if_else(versicolor>setosa & versicolor>virginica, "versicolor",
-  if_else(virginica>setosa & virginica>versicolor,"virginica", "PROBLEM"))))
-
-table(svmtestpred$prediction)
-confusionMatrix(factor(svmtestpred$prediction),factor(svmtestpred$Species))
+```{r}
+summary(stat.pca)
 ```
+
