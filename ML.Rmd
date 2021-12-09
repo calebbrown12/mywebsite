@@ -13,7 +13,7 @@ Using this machine learning technique can help you cut down on the different dim
 
 
 - Process and Results
-The graph show that PC1 and PC 2 had teh most variances. 
+The graph show that PC1 and PC 2 had the most variances. 
 
 - How it applies to Accounting
 It can help identify the most important features for a data set which will cut down the work that the accountant has to do.
