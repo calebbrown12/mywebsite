@@ -8,11 +8,31 @@ output: distill::distill_article
 
 ## Classification 
 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+Movies<-read.csv(file= 'Movies.csv')
+```
+
+
 ```{r}
 library(caret)
 library(tidyverse)
 set.seed(1)
 ```
+
+```{r}
+#lets split the data 60/40
+library(caret)
+trainIndex <- createDataPartition(iris$Species, p = .6, list = FALSE, times = 1)
+
+#look at the first few
+head(trainIndex)
+```
+
 
 ```{r}
 MoviesTrain <- Movies[ trainIndex,]
@@ -35,8 +55,8 @@ psych::describe(testTransformed)
 ```
 
 ```{r}
-knn_fit<-train(Species~.,
-               data=trainTransformed,
+knn_fit<-train(Movie.Title~.,
+               data=testTransformed,
                method="knn",
                tuneGrid=data.frame(k=10))
 

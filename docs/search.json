@@ -6,7 +6,7 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-12-08T20:53:17-07:00"
+      "last_modified": "2021-12-08T21:07:43-07:00"
     },
     {
       "path": "CV.html",
@@ -21,6 +21,24 @@
       "date": "`r Sys.Date()`",
       "contents": "\r\nHENRY CALEB BROWN\r\n149 Ora Lane | Caledonia. MS 39740 | (662)313-6942 | Brown.caleb1717@yahoo.com\r\nOBJECTIVE\r\nSeeking an Accounting/Auditing position utilizing the following background:\r\nManaging a lifeguard staff of over 15 people\r\nProviding exceptional customer service in the sales department\r\nManaging the clothing department and supervising sales\r\nOver 60 hours of Accounting and Accounting related classes\r\nEDUCATION\r\nBachelor in Business Administration Mississippi State University, Starkville, MS\r\nGraduated: December 2019\r\nMajor: Business Administration\r\nMinor: Accounting\r\nOverall GPA: 3.36\r\nProgram GPA: 3.47\r\nMasters in Professional Accountancy, Mississippi State University, Starkville, MS\r\nEstimated Graduation Date: Spring 2022\r\nMajor: Professional Accountancy\r\nMinor: Accounting Data Analytics\r\nCurrent GPA: 3.66\r\nSKILLS & ABILITIES\r\nManagement\r\nDelegated tasks to all of staff and worked them hand in hand to run the pool\r\nInfluencing, leading, and delegating abilities\r\nCritical thinking, decision making and problem solving skill\r\nAbility to influence people and clients\r\nPlanning and organizing – Organizational abilities\r\nAdaptability – Efficient under pressure, always meet deadline\r\nSales\r\nCustomer service focus\r\nInterpersonal Skills\r\nKnow how to negotiate prices with customers as well as recommending promotions\r\nExcellent written and verbal communication skills\r\nQuickly develop relationships with client\r\nSound expertise in sales\r\nEXPERIENCE\r\nOfficer-in-Charge (OIC) of Casual Lieutenants United States Air Force, Creech AFB, 432 OSS\r\nMarch ’21 - Present\r\nManage schedules for up to 90 lieutenants at any given time\r\nDelegate tasks to trainees\r\nIn-process new lieutenants arriving to Creech AFB\r\nWork directly with flight commander and squadron commander\r\nSupervising Lifeguard\r\nJoe Frank Sanderson Center, Starkville, MS\r\nMay ’16- August ’19\r\nMade schedules for 15 or more lifeguards\r\nCommunicated with our director and relayed messages to staff\r\nHandled all pool cleaning duties and assigned shifts to others\r\nManaged all scheduling of swim lessons and events coming up\r\nSales Associate\r\nDicks Sporting Goods, Columbus, MS\r\nMay ’16 – September ’16\r\nPrepared merchandise for sales floor\r\nPrioritized and accomplished a wide range of tasks each shift\r\nProvided customer service to any individual interested in buying clothes\r\n\r\n\r\n\r\n",
       "last_modified": "2021-11-05T16:04:56-06:00"
+    },
+    {
+      "path": "Final-Project.html",
+      "title": "Final Project",
+      "description": "Final Project for Acc-8143/Accounting Data Analytics\n",
+      "author": [],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\nghdfhgdfghfdhgdfhgfd\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-12-07T22:20:03-07:00"
+    },
+    {
+      "path": "Final.html",
+      "title": "Final Project",
+      "description": "Final Project for Acc-8143/Accounting Data Analytics\n",
+      "author": [],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\nClassification\r\n\r\n\r\nknitr::opts_chunk$set(echo = TRUE)\r\n\r\n\r\n\r\n\r\n\r\nMovies<-read.csv(file= 'Movies.csv')\r\n\r\n\r\n\r\n\r\n\r\nlibrary(caret)\r\nlibrary(tidyverse)\r\nset.seed(1)\r\n\r\n\r\n\r\n\r\n\r\n#lets split the data 60/40\r\nlibrary(caret)\r\ntrainIndex <- createDataPartition(iris$Species, p = .6, list = FALSE, times = 1)\r\n\r\n#look at the first few\r\nhead(trainIndex)\r\n\r\n\r\n     Resample1\r\n[1,]         1\r\n[2,]         3\r\n[3,]         4\r\n[4,]         6\r\n[5,]         7\r\n[6,]         9\r\n\r\n\r\n\r\nMoviesTrain <- Movies[ trainIndex,]\r\nMoviesTest  <- Movies[-trainIndex,]\r\n\r\n\r\n\r\n\r\n\r\npreProcValues <- preProcess(MoviesTest, method = c(\"center\", \"scale\"))\r\ntestTransformed <- predict(preProcValues, MoviesTest)\r\n\r\n\r\n\r\n\r\n\r\npsych::describe(MoviesTrain)\r\n\r\n\r\n                  vars  n         mean           sd      median\r\nï..Release.Date*     1 90        45.09        25.70        45.5\r\nMovie.Title*         2 90        45.50        26.12        45.5\r\nProduction.Budget    3 90 204911111.11  42608656.73 200000000.0\r\nDomestic.Gross       4 90 252811463.14 176427848.32 215674372.0\r\nWorldwide.Gross      5 90 735916204.96 498772831.26 653970038.5\r\n                       trimmed          mad       min        max\r\nï..Release.Date*         45.11        32.62         1         89\r\nMovie.Title*             45.50        33.36         1         90\r\nProduction.Budget 197125000.00  34841100.00 165000000  400000000\r\nDomestic.Gross    227392998.00 136471814.78         0  936662225\r\nWorldwide.Gross   667212729.15 406027570.66  69965374 2845899541\r\n                       range  skew kurtosis          se\r\nï..Release.Date*          88 -0.01    -1.22        2.71\r\nMovie.Title*              89  0.00    -1.24        2.75\r\nProduction.Budget  235000000  2.12     5.46  4491346.78\r\nDomestic.Gross     936662225  1.56     2.88 18597128.11\r\nWorldwide.Gross   2775934167  1.88     5.06 52575272.73\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-12-08T21:07:43-07:00"
     },
     {
       "path": "index.html",
