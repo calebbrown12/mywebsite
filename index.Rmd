@@ -14,5 +14,5 @@ site: distill::distill_website
 output:
   postcards::trestles
 ---
- 
+
 I am a 2d Lt in the United States Air Force working as a program manager for the PARCS division. Currently living in Colorado Springs, CO and working at Peterson Air Force Base. I lived in Caledonia, MS for 24 years of my life and went to Mississippi State to get my undergraduate degree in Business Administration. I am currently getting my masters in Professional Accountancy. 
